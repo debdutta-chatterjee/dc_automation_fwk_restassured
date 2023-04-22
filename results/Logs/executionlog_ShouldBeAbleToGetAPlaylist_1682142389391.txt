@@ -1,0 +1,74 @@
+Request method:	GET
+Request URI:	https://api.spotify.com/v1/playlists/5R7mBFFk5C96ecFmRdtOmi
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: public, max-age=0
+etag: "MC-IjBlNWM4MmViN2Q1ZmJiMWRiNzEwZjQ4NzJjNWE3YWIwIg=="
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sat, 22 Apr 2023 05:46:29 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "collaborative": false,
+    "description": "Description F  F R SrkqfAYvq  A z hzZ eTVcWEz  eOMnPn t uZpc t",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/5R7mBFFk5C96ecFmRdtOmi"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/5R7mBFFk5C96ecFmRdtOmi",
+    "id": "5R7mBFFk5C96ecFmRdtOmi",
+    "images": [
+        
+    ],
+    "name": "Playlist bX_-B2_,,a",
+    "owner": {
+        "display_name": "debdutta chatterjee",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31t34d7fpd5k6o6djxdomrtg7o6i"
+        },
+        "href": "https://api.spotify.com/v1/users/31t34d7fpd5k6o6djxdomrtg7o6i",
+        "id": "31t34d7fpd5k6o6djxdomrtg7o6i",
+        "type": "user",
+        "uri": "spotify:user:31t34d7fpd5k6o6djxdomrtg7o6i"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MiwzYzY0ODExNmExNzQ5YmIxZmZjZmFkZDQ0YTQ5NDA3NDU1Njk4YjEz",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5R7mBFFk5C96ecFmRdtOmi/tracks?offset=0&limit=100",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:5R7mBFFk5C96ecFmRdtOmi"
+}

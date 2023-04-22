@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "39b15a2c-5d60-4a21-854c-c107e6a19f25",
+		"name": "DC_Mock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27030693"
+	},
+	"item": [
+		{
+			"name": "Authorize_spotify",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://accounts.spotify.com/authorize?client_id=6f0ffcc0178e46f4b391124fd53d9102&response_type=code&redirect_uri=htpps://localhost:8080&scope=playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "6f0ffcc0178e46f4b391124fd53d9102"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "htpps://localhost:8080"
+						},
+						{
+							"key": "scope",
+							"value": "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSpotify_Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cd726c49d807408fa4ea2f70be3013cd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "6f0ffcc0178e46f4b391124fd53d9102",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "AQAI8HUWgmdMp1Zkk45aRVXcKNv1Y1HmWoFYYlS4vVlrNrQCEKrvxpkEIUTl9G5jIFPf8FO1pgLWCa2H0SQw3xanEC_hhqx5eqBS_847UUEK8LcAEKb67MSPo4oIuamDeka81EMEr3psWHJJQEo_FfixebURjyjxWffUexfwMIPuibc4YSSljj4DkilgsJhUexPNRd7VkdAjzwoy0KOgZvjVn6ogBV8VQIVmju0qdCf2hRSoxpOwMXxJU02MaYFxKPCnUgSvclm9SGM4KuOOM1_Ey8xjdoroOxvUMDK9fg",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost:8080",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://1fe22ac9-dafe-4d6b-b7df-c8a4e0bdecb5.mock.pstmn.io"
+		}
+	]
+}

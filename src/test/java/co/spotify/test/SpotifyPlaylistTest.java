@@ -30,7 +30,7 @@ public class SpotifyPlaylistTest extends Spotify_BaseTest
         context.setAttribute("playlistDesc", playListRes.getDescription());
     }
 
-    @Test
+    @Test(dependsOnMethods = {"ShouldBeAbleToCreateAPlaylist"})
     public void ShouldBeAbleToGetAPlaylist(ITestContext context){
         Playlist requestPlaylist = playlistBuilder(context.getAttribute("playlistName").toString(), context.getAttribute("playlistDesc").toString(), false);
         Response response = SpotifyPlaylistApis.get(context.getAttribute("playlistId").toString(),methodName);
@@ -38,7 +38,7 @@ public class SpotifyPlaylistTest extends Spotify_BaseTest
         assertPlaylistEqual(response.as(Playlist.class), requestPlaylist);
     }
 
-    @Test
+    @Test(dependsOnMethods = {"ShouldBeAbleToCreateAPlaylist"})
     public void ShouldBeAbleToUpdateAPlaylist(ITestContext context){
         Playlist requestPlaylist = playlistBuilder(generateName(), generateDescription(), false);
         Response response = SpotifyPlaylistApis.update(context.getAttribute("playlistId").toString(), requestPlaylist,methodName);
